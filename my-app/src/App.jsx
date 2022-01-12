@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 
-function App() {
+const App = () => {
   return (
     <p>
       Cleanedup React App
