@@ -1,11 +1,14 @@
 import React from 'react';
+
 import './App.css';
+
+import Tabs from '../src/components/Tabs/Tabs';
 
 const App = () => {
   return (
-    <p>
-      Cleanedup React App
-    </p>
+    <div className='wrapper'>
+      <Tabs />
+    </div>
   );
 }
 
