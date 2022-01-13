@@ -1,0 +1,15 @@
+.tabs-container {
+    height: 30px;
+    background-color: rgb(42, 143, 109);
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+}
+
+.tab-button {
+    width: 50%;
+    background-color: rgb(42, 143, 109);
+    border: 1px solid black;
+    cursor: pointer;
+}
