@@ -8,13 +8,28 @@ import ToDoList from './components/ToDoList/ToDoList';
 const App = () => {
 
   const [todos, setTodos] = useState([
-    { text: "Learn React" },
-    { text: "Prepare for job interview" },
-    { text: "Get ready for football training" }
+    { 
+      text: "Learn React",
+      isCompleted: false
+    },
+    { 
+      text: "Prepare for job interview",
+      isCompleted: false
+    },
+    { 
+      text: "Get ready for football training",
+      isCompleted: false
+    }
   ]);
 
   const addItem = (text) => {
     const newTodos = [...todos, { text }];
+    setTodos(newTodos);
+  };
+
+  const completeTodo = (index) => {
+    const newTodos = [...todos];
+    newTodos[index].isCompleted = true;
     setTodos(newTodos);
   };
 
