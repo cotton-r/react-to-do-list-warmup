@@ -5,7 +5,7 @@ import ToDoItem from '../ToDoItem/ToDoItem';
 
 import './ToDoList.css';
 
-const ToDoList = ({ todos, addItem }) => {
+const ToDoList = ({ todos, addItem, completeTodo }) => {
     
     return (
         <div className='to-do-list-container'>
@@ -13,11 +13,15 @@ const ToDoList = ({ todos, addItem }) => {
             <div className='to-do-list'>
                 {
                     todos.map((todo, index) => (
-                        <ToDoItem 
-                            key={index}
-                            index={index}
-                            todo={todo}
-                        />
+                        todo.isCompleted === false ?
+                            <ToDoItem 
+                                key={index}
+                                index={index}
+                                todo={todo}
+                                completeTodo={completeTodo}
+                            />
+                        :
+                        null
                     ))
                 }
             </div>

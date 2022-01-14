@@ -37,7 +37,7 @@ const App = () => {
   return (
     <div className='wrapper'>
       <Tabs />
-      <ToDoList todos={todos} addItem={addItem} />
+      <ToDoList todos={todos} addItem={addItem} completeTodo={completeTodo} />
     </div>
   );
 }
